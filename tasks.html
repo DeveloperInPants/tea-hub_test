@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный центр | Tea Master HUB</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/cards.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+
+    <div id="nav-placeholder"></div>
+
+    <main class="container">
+        <header style="margin-bottom: 40px;">
+            <h1>Учебный центр</h1>
+            <p style="color: var(--text-dim);">Твой путь от новичка до мастера чайного дела</p>
+        </header>
+
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px;">
+            
+            <section>
+                <h2 style="margin-bottom: 20px; font-size: 1.2rem;">Доступные курсы</h2>
+                <div id="courses-list" class="glass-card" style="display: flex; flex-direction: column; gap: 10px;">
+                    <div style="text-align: center; padding: 20px; color: var(--text-dim);">
+                        Загрузка учебных материалов...
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                <h2 style="margin-bottom: 20px; font-size: 1.2rem;">План стажировки</h2>
+                <div class="glass-card">
+                    <div id="weekly-plan-list">
+                        </div>
+                    
+                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--glass-border);">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 10px;">
+                            <span>Общий прогресс недели</span>
+                            <span>20%</span>
+                        </div>
+                        <div style="height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px;">
+                            <div style="width: 20%; height: 100%; background: var(--accent-gold);"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card" style="margin-top: 25px; text-align: center; padding: 20px;">
+                    <h4 style="color: var(--accent-gold); margin-bottom: 10px;">Нужна помощь?</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 15px;">
+                        Если возникли вопросы по тестам, напиши своему наставнику.
+                    </p>
+                    <button style="font-size: 0.7rem;">Написать в поддержку</button>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

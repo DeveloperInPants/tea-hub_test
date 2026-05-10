@@ -1,0 +1,60 @@
+/* css/cards.css */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-category {
+    font-size: 0.7rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Индикатор крепости */
+.strength-meter {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 20px 0;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+}
+
+.dot.active {
+    background: var(--accent-gold);
+    box-shadow: 0 0 10px var(--accent-gold);
+}
+
+/* Список задач в Обучении */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.badge {
+    background: rgba(197, 160, 89, 0.1);
+    color: var(--accent-gold);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+}

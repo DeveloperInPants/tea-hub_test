@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Master HUB | Обучающая платформа</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    <div id="nav-placeholder"></div>
+
+    <main class="container" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh;">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">Tea Master HUB</h1>
+        <p style="font-size: 1.2rem; max-width: 600px; color: var(--text-dim); margin-bottom: 40px;">
+            Профессиональная образовательная среда для сотрудников чайной индустрии. Изучай традиции, совершенствуй сервис, становись мастером.
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; width: 100%; max-width: 900px;">
+            <div class="glass-card">
+                <h3>Знания</h3>
+                <p style="font-size: 0.8rem; margin: 15px 0;">База из 30 сортов чая и кофе с подробными гайдами.</p>
+                <button onclick="location.href='search.html'">В каталог</button>
+            </div>
+            <div class="glass-card">
+                <h3>Обучение</h3>
+                <p style="font-size: 0.8rem; margin: 15px 0;">Интерактивные курсы и план стажировки на неделю.</p>
+                <button onclick="location.href='tasks.html'">К урокам</button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База знаний | Tea Master HUB</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <style>
+        .search-controls {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .search-input-wrapper {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        .search-input-wrapper input {
+            width: 100%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 15px 20px;
+            border-radius: 12px;
+            color: white;
+            font-family: inherit;
+            outline: none;
+            transition: 0.3s;
+        }
+        .search-input-wrapper input:focus {
+            border-color: var(--accent-gold);
+            background: rgba(255, 255, 255, 0.07);
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-dim);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .filter-btn.active {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            background: rgba(197, 160, 89, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    <div id="nav-placeholder"></div>
+
+    <main class="container">
+        <header style="margin-bottom: 40px;">
+            <h1>База знаний</h1>
+            <p style="color: var(--text-dim);">Изучай ассортимент: от классических улунов до авторского кофе</p>
+        </header>
+
+        <section class="search-controls">
+            <div class="search-input-wrapper">
+                <input type="text" id="search-input" placeholder="Поиск по названию продукта...">
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-type="all">Все</button>
+                <button class="filter-btn" data-type="tea">Чай</button>
+                <button class="filter-btn" data-type="coffee">Кофе</button>
+            </div>
+        </section>
+
+        <div id="catalog-grid" class="catalog-grid">
+            <div style="grid-column: 1/-1; text-align: center; padding: 50px; color: var(--text-dim);">
+                Загрузка базы данных продуктов...
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

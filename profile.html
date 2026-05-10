@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный профиль | Tea Master HUB</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <style>
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .avatar-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--accent-gold), #8a6d3b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 4px solid var(--glass-border);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .achievement-badge {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    <div id="nav-placeholder"></div>
+
+    <main class="container">
+        <section class="glass-card">
+            <div class="profile-header">
+                <div class="avatar-circle">👤</div>
+                <div>
+                    <h1 id="profile-user-name">Загрузка...</h1>
+                    <p id="profile-role" style="color: var(--accent-gold); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">
+                        Роль определяется...
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div>
+                    <label style="display:block; font-size: 0.7rem; color: var(--text-dim);">Email</label>
+                    <span id="user-email">user@teamaster.com</span>
+                </div>
+                <div>
+                    <label style="display:block; font-size: 0.7rem; color: var(--text-dim);">Телефон</label>
+                    <span>+7 (999) 000-00-00</span>
+                </div>
+                <div>
+                    <label style="display:block; font-size: 0.7rem; color: var(--text-dim);">Стаж</label>
+                    <span>3 месяца</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <button onclick="alert('Функция редактирования будет доступна скоро')">Редактировать профиль</button>
+            </div>
+        </section>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+            
+            <section class="glass-card">
+                <h3>Достижения</h3>
+                <div id="achievements-container" class="info-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="achievement-badge">
+                        <div style="font-size: 1.5rem;">🍵</div>
+                        <div style="font-size: 0.8rem; margin-top: 5px;">Чайный знаток</div>
+                    </div>
+                    <div class="achievement-badge" style="opacity: 0.3;">
+                        <div style="font-size: 1.5rem;">🏆</div>
+                        <div style="font-size: 0.8rem; margin-top: 5px;">Мастер сервиса</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glass-card">
+                <h3>Активность</h3>
+                <div style="margin-top: 20px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 10px;">
+                        <span>Прогресс базы знаний</span>
+                        <span>12 / 30 объектов</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px;">
+                        <div style="width: 40%; height: 100%; background: var(--accent-gold);"></div>
+                    </div>
+                </div>
+                <div style="margin-top: 25px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 10px;">
+                        <span>Завершенные курсы</span>
+                        <span>2 / 10 модулей</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px;">
+                        <div style="width: 20%; height: 100%; background: var(--accent-gold);"></div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
