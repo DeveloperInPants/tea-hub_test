@@ -1,0 +1,49 @@
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(25, 25, 25, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.link {
+  padding: 10px 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #888;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+  .nav {
+    bottom: 20px;
+    top: auto;
+    width: 90%;
+    justify-content: space-around;
+  }
+  .link {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
